@@ -1,0 +1,13 @@
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Modules
+node_modules/
+
+# Build
+src/prod
+
+# Other
+.DS_Store
