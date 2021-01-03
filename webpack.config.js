@@ -35,5 +35,11 @@ module.exports = {
                 use: ["html-loader?attributes=false", "pug-html-loader"]
             }
         ],
+    },
+    devServer: {
+        contentBase: path.join(__dirname, 'src/dev'),
+        hot: true,
+        inline: true,
+        port: 9090
     }
 }
