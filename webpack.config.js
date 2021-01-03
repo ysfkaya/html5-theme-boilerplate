@@ -1,6 +1,7 @@
 const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BeautifyHtmlWebpackPlugin = require('beautify-html-webpack-plugin');
 
 const prod = path.resolve(__dirname, 'src/prod');
 
@@ -17,6 +18,7 @@ module.exports = {
             filename: 'assets/css/[name].css',
             chunkFilename: 'assets/css/[id].css',
         }),
+        new BeautifyHtmlWebpackPlugin()
     ].concat(pages),
     module: {
         rules: [
