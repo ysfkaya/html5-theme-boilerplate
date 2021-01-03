@@ -7,10 +7,12 @@
         "dev": "webpack --mode development",
         "prod": "export NODE_ENV=production && webpack --mode production"
     },
-    "authors": [{
-        "name": "Yusuf Kaya",
-        "email": "yusuf.kaya.x0@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Yusuf Kaya",
+            "email": "yusuf.kaya.x0@gmail.com"
+        }
+    ],
     "license": "ISC",
     "dependencies": {
         "autoprefixer": "^10.1.0",

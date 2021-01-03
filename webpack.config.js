@@ -1,11 +1,10 @@
 const path = require('path');
-const glob = require('glob');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const dev = path.resolve(__dirname, 'src/dev');
 const prod = path.resolve(__dirname, 'src/prod');
+
+const pages = require('./pages');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.js'),
@@ -18,12 +17,7 @@ module.exports = {
             filename: 'assets/css/[name].css',
             chunkFilename: 'assets/css/[id].css',
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'index.html',
-        //     template: 'src/dev/pages/index.pug',
-        //     inject: false
-        // })
-    ],
+    ].concat(pages),
     module: {
         rules: [
             {
@@ -41,5 +35,5 @@ module.exports = {
                 use: ["html-loader?attributes=false", "pug-html-loader"]
             }
         ],
-    },
+    }
 }
